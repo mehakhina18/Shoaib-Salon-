@@ -15,7 +15,7 @@ scroll-behavior:smooth;
 padding-top:60px;
 }
 
-/* NAVBAR FIXED */
+/* NAVBAR (Location removed) */
 nav{
 position:fixed;
 top:0;
@@ -39,9 +39,7 @@ white-space:nowrap;
 
 nav div{
 display:flex;
-flex-wrap:wrap;
-justify-content:flex-end;
-gap:6px;
+gap:10px;
 }
 
 nav a{
@@ -92,6 +90,7 @@ font-style:italic;
 margin-top:10px;
 }
 
+/* BUTTONS */
 .btn{
 padding:12px 18px;
 margin:8px;
@@ -133,7 +132,7 @@ width:150px;
 font-size:13px;
 }
 
-/* LOCATION */
+/* LOCATION BOX */
 .location-box{
 background:#1a1a1a;
 padding:15px;
@@ -155,14 +154,14 @@ font-size:13px;
 @media(max-width:600px){
 .hero h1{font-size:30px;}
 .card{width:100%;}
-nav div{justify-content:center;}
+nav div{justify-content:center; flex-wrap:wrap;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (NO LOCATION BUTTON) -->
 <nav>
 <h2>Shoaib Salon</h2>
 <div>
@@ -170,7 +169,6 @@ nav div{justify-content:center;}
 <a onclick="scrollToSection('services')">Services</a>
 <a onclick="scrollToSection('skills')">Skills</a>
 <a onclick="scrollToSection('book')">Book</a>
-<a onclick="scrollToSection('location')">Location</a>
 </div>
 </nav>
 
@@ -224,8 +222,8 @@ Explore Services
 </a>
 </section>
 
-<!-- LOCATION -->
-<section id="location">
+<!-- LOCATION (SECTION ONLY) -->
+<section>
 <h2>Location</h2>
 
 <div class="location-box">
