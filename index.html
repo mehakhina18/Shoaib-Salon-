@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoaib Salon</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0b0b0b;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+z-index:1000;
+border-bottom:1px solid #222;
+}
+
+nav h2{
+color:#f5c542;
+font-size:18px;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-size:14px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#f5c542;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+background-size:cover;
+background-position:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+color:#f5c542;
+}
+
+.hero p{
+color:#ddd;
+max-width:600px;
+margin:10px 0 20px;
+font-size:16px;
+}
+
+/* IMPRESSIVE LINE */
+.tagline{
+color:#bbb;
+font-size:18px;
+margin-bottom:20px;
+font-style:italic;
+}
+
+.btn{
+padding:12px 18px;
+margin:8px;
+border:none;
+cursor:pointer;
+border-radius:6px;
+font-size:14px;
+}
+
+.gold{background:#f5c542;color:black;}
+.green{background:#25D366;color:white;}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+h2{
+color:#f5c542;
+margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.card{
+background:#1c1c1c;
+padding:20px;
+border-radius:10px;
+width:180px;
+}
+
+/* LOCATION */
+.location-box{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+max-width:600px;
+margin:auto;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+padding:20px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<h2>Shoaib Salon</h2>
+<div>
+<a onclick="scrollToSection('home')">Home</a>
+<a onclick="scrollToSection('services')">Services</a>
+<a onclick="scrollToSection('skills')">Skills</a>
+<a onclick="scrollToSection('book')">Book Now</a>
+<a onclick="scrollToSection('location')">Location</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<h1>Shoaib Salon</h1>
+
+<p class="tagline">Where Style Meets Perfection ✨</p>
+
+<p>
+Experience premium grooming, modern styling, and professional care designed to upgrade your look.
+</p>
+
+<a href="https://wa.me/923312473575">
+<button class="btn green">Book on WhatsApp</button>
+</a>
+
+<button class="btn gold" onclick="scrollToSection('services')">Explore Services</button>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">Hair Cut</div>
+<div class="card">Beard Styling</div>
+<div class="card">Facial</div>
+<div class="card">Hair Color</div>
+<div class="card">Bridal Grooming</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Our Skills</h2>
+<div class="cards">
+<div class="card">Modern Styling</div>
+<div class="card">Beard Design</div>
+<div class="card">Skin Care</div>
+<div class="card">Bridal Makeover</div>
+</div>
+</section>
+
+<!-- BOOK -->
+<section id="book">
+<h2>Book Appointment</h2>
+<p>Click below to book your slot instantly on WhatsApp</p>
+
+<a href="https://wa.me/923312473575">
+<button class="btn green">Book Now</button>
+</a>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+<h2>Our Location</h2>
+
+<div class="location-box">
+<p><b>📍 Shoaib Salon</b></p>
+<p>Shop 12, W47C+C72 Haroon Royal City</p>
+<p>Phase 1, Block 17, Gulistan-e-Johar</p>
+<p>Karachi, 75290, Pakistan</p>
+</div>
+</section>
+
+<footer>
+© 2026 Shoaib Salon | Premium Grooming Experience
+</footer>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
