@@ -23,22 +23,28 @@ background:#111;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
+padding:10px 15px;
 z-index:1000;
-border-bottom:1px solid #222;
+flex-wrap:wrap;
 }
 
 nav h2{
 color:#f5c542;
-font-size:18px;
+font-size:16px;
+margin:5px 0;
+}
+
+nav div{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 nav a{
 color:white;
-margin:0 10px;
+margin:5px 8px;
 text-decoration:none;
-font-size:14px;
-cursor:pointer;
+font-size:13px;
 }
 
 nav a:hover{
@@ -61,7 +67,7 @@ padding:20px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:40px;
 color:#f5c542;
 }
 
@@ -69,17 +75,17 @@ color:#f5c542;
 color:#ddd;
 max-width:600px;
 margin:10px 0 20px;
-font-size:16px;
+font-size:15px;
 }
 
-/* IMPRESSIVE LINE */
 .tagline{
 color:#bbb;
-font-size:18px;
-margin-bottom:20px;
+font-size:16px;
+margin-bottom:10px;
 font-style:italic;
 }
 
+/* BUTTONS */
 .btn{
 padding:12px 18px;
 margin:8px;
@@ -87,6 +93,8 @@ border:none;
 cursor:pointer;
 border-radius:6px;
 font-size:14px;
+width:90%;
+max-width:250px;
 }
 
 .gold{background:#f5c542;color:black;}
@@ -94,7 +102,7 @@ font-size:14px;
 
 /* SECTIONS */
 section{
-padding:80px 20px;
+padding:70px 15px;
 text-align:center;
 }
 
@@ -108,57 +116,63 @@ margin-bottom:20px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
+gap:10px;
 }
 
 .card{
 background:#1c1c1c;
-padding:20px;
+padding:15px;
 border-radius:10px;
-width:180px;
+width:140px;
+font-size:13px;
 }
 
 /* LOCATION */
 .location-box{
 background:#1a1a1a;
-padding:20px;
+padding:15px;
 border-radius:10px;
-max-width:600px;
+max-width:500px;
 margin:auto;
+font-size:14px;
 }
 
 /* FOOTER */
 footer{
 background:#111;
-padding:20px;
+padding:15px;
 text-align:center;
+font-size:13px;
+}
+
+/* MOBILE FIXES */
+@media(max-width:600px){
+.hero h1{font-size:30px;}
+.hero p{font-size:13px;}
+nav h2{font-size:14px;}
+.card{width:100%;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <h2>Shoaib Salon</h2>
 <div>
 <a onclick="scrollToSection('home')">Home</a>
 <a onclick="scrollToSection('services')">Services</a>
 <a onclick="scrollToSection('skills')">Skills</a>
-<a onclick="scrollToSection('book')">Book Now</a>
+<a onclick="scrollToSection('book')">Book</a>
 <a onclick="scrollToSection('location')">Location</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="home">
 <h1>Shoaib Salon</h1>
-
 <p class="tagline">Where Style Meets Perfection ✨</p>
 
-<p>
-Experience premium grooming, modern styling, and professional care designed to upgrade your look.
-</p>
+<p>Premium grooming & modern styling for a confident new look.</p>
 
 <a href="https://wa.me/923312473575">
 <button class="btn green">Book on WhatsApp</button>
@@ -167,7 +181,6 @@ Experience premium grooming, modern styling, and professional care designed to u
 <button class="btn gold" onclick="scrollToSection('services')">Explore Services</button>
 </div>
 
-<!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
 <div class="cards">
@@ -179,7 +192,6 @@ Experience premium grooming, modern styling, and professional care designed to u
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
 <h2>Our Skills</h2>
 <div class="cards">
@@ -190,30 +202,26 @@ Experience premium grooming, modern styling, and professional care designed to u
 </div>
 </section>
 
-<!-- BOOK -->
 <section id="book">
-<h2>Book Appointment</h2>
-<p>Click below to book your slot instantly on WhatsApp</p>
+<h2>Book Now</h2>
+<p>Tap below to book instantly on WhatsApp</p>
 
 <a href="https://wa.me/923312473575">
-<button class="btn green">Book Now</button>
+<button class="btn green">Book Appointment</button>
 </a>
 </section>
 
-<!-- LOCATION -->
 <section id="location">
-<h2>Our Location</h2>
-
+<h2>Location</h2>
 <div class="location-box">
-<p><b>📍 Shoaib Salon</b></p>
-<p>Shop 12, W47C+C72 Haroon Royal City</p>
-<p>Phase 1, Block 17, Gulistan-e-Johar</p>
-<p>Karachi, 75290, Pakistan</p>
+<p>📍 Shop 12, Haroon Royal City</p>
+<p>Gulistan-e-Johar, Karachi</p>
+<p>📞 +92 331 2473575</p>
 </div>
 </section>
 
 <footer>
-© 2026 Shoaib Salon | Premium Grooming Experience
+© 2026 Shoaib Salon
 </footer>
 
 <script>
