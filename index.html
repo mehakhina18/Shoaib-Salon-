@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shoaib Salon - Premium Grooming</title>
+<title>Shoaib Salon</title>
 
 <style>
 *{
@@ -14,165 +14,57 @@ font-family:Arial, sans-serif;
 }
 
 body{
-background:#0f0f0f;
+background:#0b0b0b;
 color:white;
 }
 
-header{
-background:linear-gradient(135deg,#111,#222);
-padding:20px;
-text-align:center;
-position:sticky;
-top:0;
-}
-
-header h1{
-color:#f5c542;
-font-size:28px;
-}
-
+/* HERO */
 .hero{
-height:90vh;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1621605815971-fbc98d665033') center/cover;
+padding:20px;
 }
 
-.hero h2{
-font-size:40px;
-color:#fff;
+.hero h1{
+font-size:50px;
+color:#f5c542;
 }
 
 .hero p{
 margin:15px 0;
 color:#ddd;
+font-size:18px;
+max-width:600px;
 }
 
 .btn{
 padding:12px 25px;
-margin:10px;
 border:none;
+border-radius:6px;
 cursor:pointer;
 font-size:16px;
-border-radius:5px;
+margin:8px;
 }
 
-.btn-primary{
-background:#f5c542;
-color:#000;
-}
+.primary{background:#f5c542;color:#000;}
+.whatsapp{background:#25D366;color:#fff;}
 
-.btn-secondary{
-background:#25D366;
-color:#fff;
-}
-
+/* SECTION */
 section{
-padding:50px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 h2{
 color:#f5c542;
 margin-bottom:20px;
+font-size:32px;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-}
-
-.card:hover{
-transform:scale(1.05);
-transition:0.3s;
-}
-
-.footer{
-background:#111;
-padding:20px;
-text-align:center;
-}
-
-a{
-color:#25D366;
-text-decoration:none;
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>Shoaib Salon</h1>
-<p>Premium Hair & Grooming Experience</p>
-</header>
-
-<div class="hero">
-<h2>Look Sharp. Feel Confident.</h2>
-<p>4.9★ Rated Salon in Gulistan-e-Johar, Karachi</p>
-
-<button class="btn btn-primary" onclick="scrollToSection()">Book Appointment</button>
-
-<a href="https://wa.me/923312473575" target="_blank">
-<button class="btn btn-secondary">WhatsApp Now</button>
-</a>
-</div>
-
-<section>
-<h2>About Us</h2>
-<p>
-Shoaib Salon offers professional grooming services with 2700+ satisfied clients.
-We focus on style, hygiene, and customer satisfaction.
-</p>
-</section>
-
-<section>
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="card">💇 Hair Cut & Styling</div>
-<div class="card">🧔 Beard Grooming</div>
-<div class="card">💆 Facial Treatment</div>
-<div class="card">🎨 Hair Coloring</div>
-<div class="card">👔 Bridal Grooming</div>
-
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact & Location</h2>
-<p>📍 Shop 12, Haroon Royal City, Gulistan-e-Johar, Karachi</p>
-<p>📞 +92 331 2473575</p>
-
-<br>
-
-<a href="https://wa.me/923312473575" target="_blank">
-<button class="btn btn-secondary">Book on WhatsApp</button>
-</a>
-</section>
-
-<div class="footer">
-<p>© 2026 Shoaib Salon | Premium Grooming Experience</p>
-</div>
-
-<script>
-function scrollToSection(){
-document.getElementById("contact").scrollIntoView({behavior:"smooth"});
-}
-</script>
-
-</body>
-</html>
+/*
